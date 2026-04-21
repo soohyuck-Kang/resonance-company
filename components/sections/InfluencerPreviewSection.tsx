@@ -12,7 +12,7 @@ const influencers = [
 ]
 
 const posts = [
-  { handle: '@beautybyella', cat: 'Beauty', likes: '24.3K', comments: '1.2K', caption: 'Finally found my holy grail skincare routine 🌿 This brand's serum is next level…' },
+  { handle: '@beautybyella', cat: 'Beauty', likes: '24.3K', comments: '1.2K', caption: "Finally found my holy grail skincare routine 🌿 This brand's serum is next level…" },
   { handle: '@fitlife.james', cat: 'Fitness', likes: '41.8K', comments: '2.7K', caption: 'Post-workout recovery game changed. This protein blend is unreal for my training…' },
   { handle: '@sydneyfoodie', cat: 'F&B', likes: '18.6K', comments: '890', caption: 'Sydney\'s best kept secret just landed in my DMs. No notes. Try it.' },
 ]
