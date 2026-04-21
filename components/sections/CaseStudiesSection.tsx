@@ -91,7 +91,7 @@ export default function CaseStudiesSection() {
                 {/* 결과 */}
                 <div className="flex-1 md:border-l border-gray-800 md:pl-8">
                   <p className="text-xs text-gray-600 mb-2">결과</p>
-                  <p className="text-sm text-gray-300 leading-relaxed">"{c.result}"</p>
+                  <p className="text-sm text-gray-300 leading-relaxed">&ldquo;{c.result}&rdquo;</p>
                 </div>
               </div>
             </motion.div>
