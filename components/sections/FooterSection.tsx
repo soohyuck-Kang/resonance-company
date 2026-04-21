@@ -3,112 +3,82 @@
 import { useEffect, useRef } from 'react'
 
 export default function FooterSection() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll('[data-reveal]').forEach((el) => {
-              el.classList.add('visible')
-            })
-            entry.target.querySelectorAll('.reveal-line').forEach((el) => {
-              el.classList.add('visible')
-            })
-          }
-        })
-      },
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('visible'))
+          e.target.querySelectorAll('.reveal-line').forEach((el) => el.classList.add('visible'))
+        }
+      }),
       { threshold: 0.1 }
     )
-    if (sectionRef.current) observer.observe(sectionRef.current)
+    if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-black" id="contact">
-      {/* Contact CTA */}
-      <div className="px-6 md:px-16 lg:px-24 pt-32 pb-24 border-t border-gray-800">
+    <section ref={ref} className="bg-black border-t border-gray-900" id="contact">
+
+      {/* Contact */}
+      <div className="px-6 md:px-16 lg:px-24 pt-32 pb-28">
         <div className="max-w-7xl mx-auto">
 
-          {/* Label */}
-          <div className="flex items-center gap-4 mb-20 reveal" data-reveal>
-            <span className="w-8 h-px bg-neon-green" />
-            <span className="text-neon-green text-xs tracking-[0.3em] uppercase font-medium">Contact Us</span>
+          <div className="flex items-center gap-4 mb-24 reveal" data-reveal>
+            <span className="w-6 h-px bg-neon-green" />
+            <span className="text-neon-green text-xs tracking-[0.35em] uppercase">Contact</span>
           </div>
 
-          {/* Big headline */}
-          <div className="mb-16">
-            <h2
-              className="font-display font-black leading-none tracking-tight reveal"
-              data-reveal
-              style={{ fontSize: 'clamp(3rem, 9vw, 10rem)' }}
-            >
-              일단 한 번<br />
-              <span className="text-neon-green">써보세요.</span>
+          <div className="mb-16 reveal" data-reveal>
+            <h2 className="font-display font-black leading-none tracking-tight" style={{ fontSize: 'clamp(3rem, 9vw, 11rem)' }}>
+              Let's work<br />
+              <span className="text-neon-green">together.</span>
             </h2>
           </div>
 
-          <p className="text-gray-400 text-xl font-light mb-6 max-w-xl reveal" data-reveal>
-            브랜드·제품·타겟만 알려주시면<br />
-            맞춤 인플루언서 샘플 리스트를 <strong className="text-white">무료</strong>로 드립니다.
-          </p>
-          <p className="text-gray-600 text-sm mb-16 reveal" data-reveal>
-            결제 없음 · 계약 없음 · 24시간 내 회신
+          <p className="text-white/30 text-lg font-light mb-6 max-w-sm reveal" data-reveal>
+            Share your brand, product, and target market. We'll send a curated sample list — free, within 24 hours.
           </p>
 
-          {/* Neon line */}
-          <div className="mb-16">
+          <div className="mb-20 reveal" data-reveal>
             <div className="h-px bg-neon-green reveal-line" />
           </div>
 
-          {/* CTA row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-24 reveal" data-reveal>
+          <div className="flex flex-col sm:flex-row gap-4 mb-24 reveal" data-reveal>
             <a
-              href="mailto:contact@rsnc.co.kr?subject=무료 인플루언서 샘플 리스트 요청&body=브랜드명:%0D%0A제품:%0D%0A타겟 시장:%0D%0A카테고리:"
-              className="btn-primary text-lg px-12 py-5"
+              href="mailto:contact@rsnc.co.kr?subject=Sample List Request&body=Brand:%0D%0AProduct:%0D%0ATarget Market:%0D%0ACategory:"
+              className="btn-primary text-base px-10 py-5"
             >
-              무료로 샘플 받기
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              Request Free Sample
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a
-              href="mailto:contact@rsnc.co.kr?subject=상담 문의"
-              className="btn-secondary text-lg px-12 py-5"
-            >
-              상담 문의
+            <a href="mailto:contact@rsnc.co.kr?subject=Inquiry" className="btn-secondary text-base px-10 py-5">
+              General Inquiry
             </a>
           </div>
 
-          {/* Guarantee badges */}
           <div className="flex flex-wrap gap-8 reveal" data-reveal>
-            {['24시간 내 회신', '맞춤 샘플 리스트 제공', '계약 강요 없음'].map((item) => (
-              <span key={item} className="flex items-center gap-2 text-sm text-gray-500">
-                <span className="text-neon-green text-base">✓</span>
-                {item}
+            {['Reply within 24h', 'Free sample list', 'No commitment'].map((item) => (
+              <span key={item} className="flex items-center gap-2 text-sm text-gray-600">
+                <span className="text-neon-green">✓</span> {item}
               </span>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Footer bar */}
-      <div className="border-t border-gray-900 px-6 md:px-16 lg:px-24 py-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div>
-            <span className="font-display font-black text-2xl tracking-tight">team resonance</span>
-            <div className="w-1/3 h-px bg-neon-green mt-1" />
-          </div>
-          <div className="text-gray-600 text-sm space-y-1 md:space-y-0 md:flex md:gap-8">
-            <a href="mailto:contact@rsnc.co.kr" className="block md:inline hover:text-neon-green transition-colors">
-              contact@rsnc.co.kr
-            </a>
-            <a href="https://rsnc.co.kr" className="block md:inline hover:text-neon-green transition-colors">
-              rsnc.co.kr
-            </a>
-          </div>
-          <p className="text-gray-700 text-xs">© 2026 team resonance. All rights reserved.</p>
+      {/* Footer */}
+      <div className="border-t border-gray-900 px-6 md:px-16 lg:px-24 py-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+          <span className="font-display font-black text-xl tracking-tight">team resonance</span>
+          <a href="mailto:contact@rsnc.co.kr" className="text-gray-700 text-sm hover:text-neon-green transition-colors">
+            contact@rsnc.co.kr
+          </a>
+          <p className="text-gray-800 text-xs">© 2026 team resonance.</p>
         </div>
       </div>
     </section>
