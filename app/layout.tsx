@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Resonance Company - Influencer & Performance Marketing',
+  title: 'team resonance - Influencer & Performance Marketing',
   description: 'Selection over Noise. Focus creates results.',
   keywords: ['influencer marketing', 'performance marketing', 'resonance', 'RSNC'],
 }

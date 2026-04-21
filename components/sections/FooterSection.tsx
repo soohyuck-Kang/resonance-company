@@ -29,7 +29,7 @@ export default function FooterSection() {
             <div className="mb-8">
               <div className="relative inline-block">
                 <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  RESONANCE
+                  team resonance
                 </h3>
                 <div className="absolute bottom-0 left-0 w-1/3 h-1 bg-neon-green" />
               </div>
@@ -131,7 +131,7 @@ export default function FooterSection() {
           transition={{ duration: 0.8 }}
           className="text-center text-sm text-gray-600"
         >
-          <p>© 2026 Resonance Company. All rights reserved.</p>
+          <p>© 2026 team resonance. All rights reserved.</p>
           <p className="mt-2">
             Influencer & Performance Marketing Agency
           </p>
