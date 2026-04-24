@@ -42,7 +42,7 @@ export default function InfluencerPreviewSection() {
             <span className="w-6 h-px" style={{ background: '#16A34A' }} />
             <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>콘텐츠 맛보기</span>
           </div>
-          <h2 className="font-display font-black leading-none tracking-tight mb-4 reveal" data-reveal
+          <h2 className="font-display font-black leading-none tracking-tight mb-4 reveal text-gray-900" data-reveal
             style={{ fontSize: 'clamp(1.4rem, 3vw, 3.2rem)' }}>
             이런 인플루언서들과<br />
             <span style={{ color: '#16A34A' }}>함께</span>

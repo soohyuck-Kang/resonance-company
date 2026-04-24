@@ -68,7 +68,7 @@ export default function StatsSection() {
             <span className="w-6 h-px" style={{ background: '#16A34A' }} />
             <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>Real Results</span>
           </div>
-          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal" data-reveal
+          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal text-gray-900" data-reveal
             style={{ fontSize: 'clamp(1.4rem, 3vw, 3.5rem)' }}>
             말보다<br />
             <span style={{ color: '#16A34A' }}>숫자</span>

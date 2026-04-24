@@ -6,31 +6,23 @@ interface WaveformBackgroundProps {
 
 export default function WaveformBackground({ mousePosition: _ }: WaveformBackgroundProps) {
   return (
-    <div className="absolute inset-0 overflow-hidden bg-black">
-      {/* Video background */}
+    <div className="absolute inset-0 overflow-hidden bg-white">
       <video
-        className="absolute inset-0 w-full h-full object-cover opacity-60"
-        src="/green-fabric.mp4"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ opacity: 0.85, filter: 'saturate(1.4) brightness(1.05)' }}
+        src="/hero-bright.mp4"
         autoPlay
         muted
         loop
         playsInline
       />
-
-      {/* Vignette + gradient overlays */}
+      {/* 가장자리 페이드 */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.65) 100%)',
-        }}
+        style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.4) 100%)' }}
       />
-      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/60 via-transparent to-black/85" />
-
-      {/* Green tint overlay */}
-      <div
-        className="absolute inset-0 z-10 pointer-events-none"
-        style={{ background: 'rgba(124,255,0,0.03)' }}
-      />
+      {/* 상하 페이드 */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-white/30 via-transparent to-white/60" />
     </div>
   )
 }

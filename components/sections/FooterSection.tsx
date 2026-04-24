@@ -48,7 +48,7 @@ export default function FooterSection() {
             <span className="w-6 h-px" style={{ background: '#16A34A' }} />
             <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>Contact Us</span>
           </div>
-          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal" data-reveal
+          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal text-gray-900" data-reveal
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 4.5rem)' }}>
             한 번만<br />
             <span style={{ color: '#16A34A' }}>써</span><span style={{ color: '#00D4FF' }}>보세요.</span>

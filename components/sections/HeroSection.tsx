@@ -36,6 +36,8 @@ export default function HeroSection() {
           className="font-display font-black tracking-tight leading-none mb-8"
           style={{
             fontSize: 'clamp(4.5rem, 13vw, 15rem)',
+            color: '#0A0A0A',
+            textShadow: '0 2px 40px rgba(255,255,255,0.8)',
             ...fade(150),
           }}
         >
@@ -43,7 +45,7 @@ export default function HeroSection() {
         </h1>
 
         <p
-          className="text-white/50 font-light tracking-widest text-sm md:text-base uppercase mb-14"
+          className="font-light tracking-widest text-sm md:text-base uppercase mb-14 text-gray-700"
           style={fade(350)}
         >
           We find the right voice for your brand.
@@ -56,7 +58,7 @@ export default function HeroSection() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-          <a href="#why" className="btn-secondary">
+          <a href="#why" className="inline-flex items-center gap-3 px-10 py-5 bg-white/80 text-gray-900 font-bold border-2 border-gray-900/30 hover:bg-white hover:border-gray-900 transition-all duration-300 text-base tracking-wide backdrop-blur-sm">
             Learn More
           </a>
         </div>
@@ -66,8 +68,8 @@ export default function HeroSection() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
         style={{ opacity: visible ? 0.4 : 0, transition: 'opacity 1s 1.2s' }}
       >
-        <span className="text-[10px] tracking-[0.4em] uppercase text-white/40">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/30 to-transparent" />
+        <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400">Scroll</span>
+        <div className="w-px h-12 bg-gradient-to-b from-gray-400/50 to-transparent" />
       </div>
     </section>
   )

@@ -136,7 +136,7 @@ export default function WhyResonanceSection() {
             <span className="w-6 h-px" style={{ background: '#16A34A' }} />
             <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>Why Resonance</span>
           </div>
-          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal" data-reveal
+          <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal text-gray-900" data-reveal
             style={{ fontSize: 'clamp(1.4rem, 3vw, 3.5rem)' }}>
             많이 뿌리는 게 아니라<br />
             <span style={{ color: '#16A34A' }}>정확하게</span>{' '}
