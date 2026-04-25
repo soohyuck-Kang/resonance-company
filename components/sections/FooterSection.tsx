@@ -44,18 +44,21 @@ export default function FooterSection() {
       {/* 상단 헤드라인 */}
       <div className="px-6 md:px-16 lg:px-24 pt-28 pb-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-6 reveal" data-reveal>
+          <div className="flex items-center gap-4 mb-8 reveal" data-reveal>
             <span className="w-6 h-px" style={{ background: '#16A34A' }} />
-            <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>Contact Us</span>
+            <span className="text-xs tracking-[0.35em] uppercase font-medium" style={{ color: '#16A34A' }}>Free Sample List</span>
           </div>
           <h2 className="font-display font-black leading-none tracking-tight mb-6 reveal text-gray-900" data-reveal
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 4.5rem)' }}>
-            한 번만<br />
-            <span style={{ color: '#16A34A' }}>써</span><span style={{ color: '#00D4FF' }}>보세요.</span>
+            브랜드에 맞는<br />
+            인플루언서,<br />
+            <span style={{ color: '#16A34A' }}>지금 바로</span>{' '}
+            <span style={{ color: '#00D4FF' }}>확인하세요.</span>
           </h2>
           <p className="text-gray-500 text-lg font-light max-w-lg reveal" data-reveal>
-            브랜드, 제품, 타겟 시장만 알려주시면<br />
-            <strong className="text-gray-900 font-semibold">맞춤 인플루언서 샘플 리스트를 무료로</strong> 드립니다.
+            브랜드명, 제품, 타겟 시장만 알려주시면<br />
+            <strong className="text-gray-900 font-semibold">48시간 안에 맞춤 인플루언서 리스트</strong>를 무료로 드립니다.<br />
+            <span className="text-gray-400 text-base">계약 없음 · 비용 없음 · 부담 없음.</span>
           </p>
         </div>
       </div>
