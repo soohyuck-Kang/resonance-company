@@ -121,8 +121,8 @@ export default function FooterSection() {
             </p>
           </div>
           <div className="flex gap-6 shrink-0">
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">{t('footer_terms')}</a>
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">{t('footer_privacy')}</a>
+            <a href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">{t('footer_terms')}</a>
+            <a href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">{t('footer_privacy')}</a>
           </div>
         </div>
       </div>
